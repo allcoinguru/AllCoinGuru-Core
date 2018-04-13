@@ -116,9 +116,9 @@ public:
         vSeeds.clear();
 
         // AllCoinGuru addresses start with 'S'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,47);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,7);
         // AllCoinGuru script addresses start with '7'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,10);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
         // AllCoinGuru private keys start with '7' or 'X'
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,198);
         // AllCoinGuru BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
