@@ -92,7 +92,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_DIP0001].nThreshold = 3226; // 80% of 4032
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000300012");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000b0001a");
 
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x000007d5689ee598fbc114fb64d7db7546070e53a4eb982dbbbcb8cba209fa45");
@@ -109,7 +109,7 @@ public:
 
         genesis = CreateGenesisBlock(1523613140, 647045, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0000000000000000000000000000000000000000000000000000000000b0001a"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000009d54ee5e0e5983d41fe1feb233fea8669c96cdbe30ef6b202c4fe6856c7"));
         assert(genesis.hashMerkleRoot == uint256S("0x00000f22ed3249c15333c9fa1d83dd0b0dc4ffcfbcbbc46141feed194f996ad2"));
 
         vFixedSeeds.clear();
