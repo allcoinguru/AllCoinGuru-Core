@@ -1,2 +1,2 @@
-AllCoinGuru Core staging tree 1.1.0.2
+AllCoinGuru Core staging tree 2.1
 ===============================
