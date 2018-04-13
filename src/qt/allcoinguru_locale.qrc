@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/allcoinguru_bg.qm</file>
+        <file alias="de">locale/allcoinguru_de.qm</file>
+        <file alias="en">locale/allcoinguru_en.qm</file>
+        <file alias="es">locale/allcoinguru_es.qm</file>
+        <file alias="fi">locale/allcoinguru_fi.qm</file>
+        <file alias="fr">locale/allcoinguru_fr.qm</file>
+        <file alias="it">locale/allcoinguru_it.qm</file>
+        <file alias="ja">locale/allcoinguru_ja.qm</file>
+        <file alias="pl">locale/allcoinguru_pl.qm</file>
+        <file alias="pt">locale/allcoinguru_pt.qm</file>
+        <file alias="ru">locale/allcoinguru_ru.qm</file>
+        <file alias="sk">locale/allcoinguru_sk.qm</file>
+        <file alias="sv">locale/allcoinguru_sv.qm</file>
+        <file alias="vi">locale/allcoinguru_vi.qm</file>
+        <file alias="zh_CN">locale/allcoinguru_zh_CN.qm</file>
+        <file alias="zh_TW">locale/allcoinguru_zh_TW.qm</file>
+    </qresource>
+</RCC>

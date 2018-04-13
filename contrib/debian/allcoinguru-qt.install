@@ -1,0 +1,6 @@
+usr/local/bin/allcoinguru-qt usr/bin
+share/pixmaps/allcoinguru32.xpm usr/share/pixmaps
+share/pixmaps/allcoinguru16.xpm usr/share/pixmaps
+share/pixmaps/allcoinguru128.png usr/share/pixmaps
+debian/allcoinguru-qt.desktop usr/share/applications
+debian/allcoinguru-qt.protocol usr/share/kde4/services/

@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  allcoingurud The AllCoinGuru Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: allcoingurud
+# processname: allcoingurud
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/allcoingurud, see below
+if [ -f /etc/sysconfig/allcoingurud ]; then
+        . /etc/sysconfig/allcoingurud
+fi
+
+RETVAL=0
+
+prog=allcoingurud
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/allcoingurud
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/allcoingurud}
+
+# allcoingurud defaults to /usr/bin/allcoingurud, override with BITCOIND_BIN
+allcoingurud=${BITCOIND_BIN-/usr/bin/allcoingurud}
+
+# allcoingurud opts default to -disablewallet, override with BITCOIND_OPTS
+allcoingurud_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $allcoingurud $allcoingurud_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac
